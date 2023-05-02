@@ -1,3 +1,15 @@
-# Exclude all [sub]folders named history
+# exclude all [sub]folders named "history"
 
+history/
+/history/
+
+history/*
+/history/*
+
+**/history
+**/history/
+
+/**/history
 /**/history/
+
+# TODO: which of these actually does what I need, so the rest can be deleted
