@@ -1,6 +1,6 @@
 // app.js
 
-// 1RM - simple One-Rep Max calculator
+// Counter app - proof-of-concept for some React client-side things I'm trying out without requiring a build tool like Webpack
 
 // REMINDER: 	, /[?&]live\b/i.test(location.search) && "useLiveReload"
 
