@@ -31,11 +31,11 @@ const Counter = ({initialValue}) => {
 	const resetCount = () => setCount(initialValue | 0);
 
 	const fizzBuzz = (count) => {
-		if (count % 3 == 0 && count % 4 == 0){
+		if (count % 3 == 0 && count % 5 == 0){
 			return 'FizzBuzz'
 		} else if (count % 3 == 0){
 			return 'Fizz'
-		} else if (count % 4 == 0){
+		} else if (count % 5 == 0){
 			return 'Buzz'
 		} else {
 			return ''
