@@ -30,17 +30,13 @@ const Counter = ({initialValue}) => {
 
 	const resetCount = () => setCount(initialValue | 0);
 
-	const fizzBuzz = (count) => {
-		if (count % 3 == 0 && count % 5 == 0){
-			return 'FizzBuzz'
-		} else if (count % 3 == 0){
-			return 'Fizz'
-		} else if (count % 5 == 0){
-			return 'Buzz'
-		} else {
-			return ''
-		}
-	}
+	const fizzBuzz = (number) => {
+		let suffix = "";
+		if(number % 3 === 0) suffix += "Fizz";
+		if(number % 5 === 0) suffix += "Buzz";
+		return suffix;
+		// "more performant" but less clear: return (number % 5 === 0) ? suffix + "Buzz" : suffix;
+	};
 
 	const updateStyles = (next) => {
 		els.forEach(s => next
