@@ -30,6 +30,18 @@ const Counter = ({initialValue}) => {
 
 	const resetCount = () => setCount(initialValue | 0);
 
+	const fizzBuzz = (count) => {
+		if (count % 3 == 0 && count % 5 == 0){
+			return 'FizzBuzz'
+		} else if (count % 3 == 0){
+			return 'Fizz'
+		} else if (count % 5 == 0){
+			return 'Buzz'
+		} else {
+			return ''
+		}
+	}
+
 	const updateStyles = (next) => {
 		els.forEach(s => next
 			? (
@@ -55,7 +67,7 @@ const Counter = ({initialValue}) => {
 	}, [mode, count]);
 
 	return h("div", null, [
-		h("h1", { key: _id ++ }, `Current count: ${count}`),
+		h("h1", { key: _id ++ }, `Current count: ${count} ${fizzBuzz(count)}`),
 		h("button", { key: _id ++, onClick: incrementCount }, "+1"),
 		h("button", { key: _id ++, onClick: decrementCount }, "-1"),
 		h("button", { key: _id ++, style: { fontWeight: "bold" }, onClick: resetCount }, "Reset"),
