@@ -32,11 +32,12 @@ const Counter = ({initialValue}) => {
 
 	const fizzBuzz = n => (n % 3 ? "" : "Fizz") + (n % 5 ? "" : "Buzz");
 	// ( ^ Issue #10) "fizzbuzz current function does 3 numeric checks,
-	// see if ChatGPT can produce a one-liner that does only 2 checks"
-	// [successful prompt:] js function fizzBuzz(number).
-	// return string only, you shall not return the number.
-	// It shall be a one-liner JS function using arrow syntax.
-	// It shall only do 2 numeric checks, it shall not do 3 of them.
+	//  see if ChatGPT can produce a one-liner that does only 2 checks"
+	// (this was the successful prompt...)
+	//  js function fizzBuzz(number).
+	//  return string only, you shall not return the number.
+	//  It shall be a one-liner JS function using arrow syntax.
+	//  It shall only do 2 numeric checks, it shall not do 3 of them.
 
 	const updateStyles = (next) => {
 		els.forEach(s => next
